@@ -5,9 +5,13 @@ const playAgainBtn = document.getElementById('play-again');
 let xTurn = true;
 
 function updateTurnDisplay() {
-  turnBoxes.forEach(box => {
-    box.style.backgroundColor = (box.textContent === (xTurn ? 'X' : 'O')) ? '#0edfdb' : '#1e1e2f';
-  });
+  if (xTurn) {
+    turnBoxes[0].style.backgroundColor = '#0edfdb';
+    turnBoxes[1].style.backgroundColor = '#1e1e2f';
+  } else {
+    turnBoxes[1].style.backgroundColor = '#0edfdb';
+    turnBoxes[0].style.backgroundColor = '#1e1e2f';
+  }
 }
 
 
