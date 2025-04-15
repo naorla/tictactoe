@@ -3,9 +3,10 @@ body {
   margin: 0;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  padding-top: 30px; 
 }
 
 .turn-container {
@@ -25,14 +26,18 @@ body {
   font-size: 25px;
   margin: 0;
   font-family: 'Franklin Gothic Medium';
-  padding-bottom: 5px;
+  padding-bottom: 2px;
+  
 }
 
 .turn-box {
   font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
   padding: 15px 20px;
-  height: 50px;
+  height: 40px;
   border: 2px solid #8f4a61;
   border-radius: 5px;
   background-color: #1e1e2f;
@@ -49,22 +54,31 @@ body {
   box-shadow: 0px 5px 10px rgba(223, 43, 43, 0.5);
   border: 3px solid #ff2e63;
   border-radius: 10px;
+  text-align: center;
   background-color: #1e1e2f;
 }
 
 .cell {
   width: 100px;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 60px;
   font-weight: 700;
   color: #ff2e63;
   background-color: #ffffff11;
   border: 3px solid #2f3952;
   box-shadow: 0px 5px 10px rgba(223, 43, 43, 0.5);
+  font-family: Arial, sans-serif;
+  transition: transform 0.2s ease;
+
 }
 
 .cell:hover {
   background-color: #0edfdb;
+  transform: scale(1.1);
+
 }
 
 button {
@@ -77,9 +91,24 @@ button {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.2s ease;
 }
 
-button:hover {
-  transform: scale(1.1);
+.welcome-screen {
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding-top: 120px;
 }
+
+.welcome-screen h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+#back-to-welcome-page {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin: 0;
+  width: auto;
+}
+
